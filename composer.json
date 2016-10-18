@@ -1,0 +1,12 @@
+{
+  "name": "2imw15-project/webui",
+  "authors": [
+    {
+      "name": "mthaak",
+      "email": "m.t.haak@ephi-design.com"
+    }
+  ],
+  "require": {
+    "elasticsearch/elasticsearch": "~2.0"
+  }
+}

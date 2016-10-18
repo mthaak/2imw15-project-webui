@@ -1,0 +1,7 @@
+user_id;user_screen_name;influence;credibility;n_rumors;n_rumors_produced;n_rumors_propagated;n_rumors_stifled
+3131144855;BorisJohnson;0.591268;0.938283;92;0;39;53
+103065157;David_Cameron;0.944786;0.993938;71;15;17;39
+1225696320;George_Osborne;0.873373;0.940458;66;16;10;40
+748453510048518000;michaelgove;0.563448;0.698658;65;7;29;29
+19017675;Nigel_Farage;0.653654;0.647519;74;28;25;21
+3695647695;vote_leave;0.749449;0.921280;60;8;15;37
