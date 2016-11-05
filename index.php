@@ -49,16 +49,18 @@ include 'content.php';
                     <div class="Rumor panel">
                         <div class="panel-body">
                         <h4>%representative_tweet%</h4>
-                        <b>Variations:</b>
+                        <b>Variations</b>
                         <div class="VariationsList well">
+                        <ul>
                             %variations%
+                            </ul>
                         </div>
-                        <p><b>Popularity:</b> %popularity%</p>
-                        <p><b>Veracity:</b> %veracity%</p>
-                        
-                        <p class="RumorProducersList"><b>Top producers:</b> %producers%</p>
-                        <p class="RumorPropagatorsList"><b>Top propagators:</b> %propagators%</p>
-                        <p class="RumorStiflerList"><b>Top stiflers:</b> %stiflers%</p>
+                        <table class="RumorPropertyTable">
+                            <tr><td class="RumorPropertyName">Popularity</td><td class="RumorPropertyVal">%popularity%</td></tr>
+                            <tr><td class="RumorPropertyName">Predicted truthfullness</td><td class="RumorPropertyVal">%veracity%</td></tr>
+                            <tr><td class="RumorPropertyName">Top propagators</td><td class="RumorPropertyVal">%propagators%</td></tr>
+                            <tr><td class="RumorPropertyName">Top stiflers</td><td class="RumorPropertyVal">%stiflers%</td></tr>
+                        </table>
                         </div>
                     </div>';
                 array_walk($rumors, function ($rumor) use ($rumor_html) {
@@ -71,26 +73,6 @@ include 'content.php';
     </div>
 
     <div id="right_side" class="col-md-4">
-        <div class="panel panel-primary">
-            <div class="panel-heading">Top rumor producers</div>
-            <ul id="producers_list" class="list-group">
-                <?php
-                $producer_html = '
-                    <span class="list-group-item">
-                        <h4>%user_screen_name%</h4>
-                        <table class="UserPropertyTable">
-                            <tr><td class="UserPropertyName">Rumors produced</td><td class="UserPropertyVal">%n_rumors_produced%</td></tr>
-                            <tr><td class="UserPropertyName">Influence</td><td class="UserPropertyVal">%influence%</td></tr>
-                            <tr><td class="UserPropertyName">Credibility</td><td class="UserPropertyVal">%credibility%</td></tr>
-                        </table>
-                    </span>';
-                array_walk($top_producers, function ($producer) use ($producer_html) {
-                    echo(convertUserToHtml($producer, $producer_html));
-                });
-                ?>
-            </ul>
-        </div>
-
         <div class="panel panel-primary">
             <div class="panel-heading">Top propagators</div>
             <ul id="propagators_list" class="list-group">

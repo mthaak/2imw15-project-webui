@@ -8,7 +8,7 @@ include 'es_login.php';
  * This script indexes the data in the .csv file $FILENAME to elasticsearch.
  */
 
-$FILENAME = 'users_testdata.csv';
+$FILENAME = 'users_testdata2.csv';
 $DELIMITER = ';';
 $TYPE = 'user';
 
@@ -45,7 +45,6 @@ if (($handle = fopen($FILENAME, 'r')) !== false) {
             $row[2] = stringToArray($row[2]);
             $row[5] = stringToArray($row[5]);
             $row[6] = stringToArray($row[6]);
-            $row[7] = stringToArray($row[7]);
         }
 
         $params['body'][] = array_combine($header, $row);

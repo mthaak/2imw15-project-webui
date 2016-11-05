@@ -39,15 +39,6 @@ foreach ($rumors as $rumor) {
         'index' => 'my_index',
         'type'  => 'user',
         'body'  => [
-            'ids' => $rumor['producer_ids'],
-        ],
-    ];
-    $rumor['producers'] = es_extract_sources_from_mget($client->mget($params));
-
-    $params = [
-        'index' => 'my_index',
-        'type'  => 'user',
-        'body'  => [
             'ids' => $rumor['propagator_ids'],
         ],
     ];

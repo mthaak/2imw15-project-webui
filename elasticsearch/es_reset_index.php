@@ -36,9 +36,6 @@ $params = [
                     'n_rumors'            => [
                         'type' => 'integer',
                     ],
-                    'n_rumors_produced'   => [
-                        'type' => 'integer',
-                    ],
                     'n_rumors_propagated' => [
                         'type' => 'integer',
                     ],
@@ -110,9 +107,6 @@ $params = [
                     ],
                     'veracity'          => [
                         'type' => 'float',
-                    ],
-                    'producer_ids'      => [
-                        'type' => 'string',
                     ],
                     'propagator_ids'    => [
                         'type' => 'string',

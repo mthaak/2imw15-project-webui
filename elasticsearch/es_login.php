@@ -7,5 +7,5 @@ use Elasticsearch\ClientBuilder;
  */
 
 $client = ClientBuilder::create()
-                       ->setHosts(['host' => 'admin:7g1o3wiwr5oscamg49@277131d077608ba3df0679f8eeb8842a.eu-west-1.aws.found.io:9200'])
+                       ->setHosts(['host' => 'admin:geqxf4lgoa65cdeasm@09f5609c2faaf618895cb6cefae88fda.eu-west-1.aws.found.io:9200'])
                        ->build();

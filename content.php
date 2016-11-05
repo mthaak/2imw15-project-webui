@@ -25,6 +25,8 @@ function convertUserToHtml($user, $user_html_template)
 {
     $user = round_floats($user);
 
+    $user['credibility'] = number_format($user['credibility'] * 100, 1) . '%';
+
     return str_replace_assoc($user, $user_html_template);
 }
 
@@ -40,13 +42,14 @@ function emphasize_search_terms($subject, $search_query)
 function convertRumorToHtml($rumor, $rumor_html_template, $search_query)
 {
     $variation_html = '
-        <p class="Variation">%variation%</p>';
+        <li class="Variation">%variation%</li>';
     $rumor["variations"] = join("\n", array_map(function ($variation) use ($variation_html) { return str_replace("%variation%", $variation, $variation_html); }, array_column($rumor["variations"], 'text')));
 
     $rumor['variations'] = emphasize_search_terms($rumor['variations'], $search_query);
     $rumor['representative_tweet'] = emphasize_search_terms($rumor['representative_tweet'], $search_query);
 
-    $rumor['producers'] = implode(', ', array_column($rumor['producers'], 'user_screen_name'));
+    $rumor['veracity'] = number_format($rumor['veracity'] * 100, 1) . '%';
+
     $rumor['propagators'] = implode(', ', array_column($rumor['propagators'], 'user_screen_name'));
     $rumor['stiflers'] = implode(', ', array_column($rumor['stiflers'], 'user_screen_name'));
 

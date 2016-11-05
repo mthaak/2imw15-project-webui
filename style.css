@@ -78,6 +78,12 @@ h1 {
     overflow: scroll;
 }
 
+.Variation {
+    position: relative;
+    margin-bottom: 10px;
+    left: -10px;
+}
+
 .UserPropertyTable {
     width: 100%;
 }
@@ -88,5 +94,18 @@ h1 {
 }
 
 .UserPropertyVal {
+    text-align: right;
+}
+
+.RumorPropertyTable {
+    width: 100%;
+}
+
+.RumorPropertyName {
+    font-weight: bold;
+    text-align: left;
+}
+
+.RumorPropertyVal {
     text-align: right;
 }
